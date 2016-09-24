@@ -22,6 +22,7 @@
             includeAlbums: [],
             onlyAlbum: null,
             thumbnailSize: 130,
+            thumbnailHeight: 200,
             showAlbumNameInPreview: true,
             lightbox: true,
             photosCheckbox: true,
@@ -205,7 +206,7 @@
                                             class: "fb-albums-list"
                                         }));
 
-                                        $(previewContainer).append($("<ul>", { class: "fb-photos", "style": "min-height:" + settings.thumbnailSize + "px !important" }));
+                                        $(previewContainer).append($("<ul>", { class: "fb-photos", "style": "min-height:" + settings.thumbnailHeight + "px !important" }));
                                         photosContainer = $(previewContainer).find("ul.fb-photos");
 
                                         var invokeUrl = openGraphApiUrl + $(self).attr("data-id") + "/photos";
