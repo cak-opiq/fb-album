@@ -1,6 +1,6 @@
 h3.fb-album-heading, h3.fb-account-heading {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    display: inline-block;
+    display: block;
     margin: 0px;
     margin-left: 10px;
     font-weight: lighter;
