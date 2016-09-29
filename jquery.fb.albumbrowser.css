@@ -248,8 +248,9 @@ img.fb-comment-account {
 
 .fb-preview-text, .fb-album-text {
     display: table !important;
-    white-space: pre;
+    white-space: pre-wrap;
     clear: both !important;
+    
 }
 
 .fb-album-text {
