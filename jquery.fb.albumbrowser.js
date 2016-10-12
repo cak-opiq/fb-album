@@ -566,6 +566,11 @@
                 });
             }
 
+            function addLinkButton(url) {
+				var linkBtn = $("<a>", {class: "fb-link", href:url});
+				linkBtn.text("FB link");
+			}
+            
             function addLikeButton(container, url) {
                 if (settings.likeButton) {
                     var likeBtn = $("<div>", { "data-show-faces": "false", class: "fb-like", "data-href": url, "data-action": "like", "data-layout": "box_count", "data-share": settings.shareButton, "data-show-faces": "false" });
@@ -605,6 +610,8 @@
 
                     overlay.append(lightboxContent);
                     lightboxContent.append($("<img>", { class: "fb-preview-img" }));
+                    lightboxContent.append($("<a>", { class: "fb-link" }));
+                    
                     if (settings.showImageText || settings.likeButton || settings.shareButton) {
                         lightboxContent.append($("<div>", { class: "fb-preview-text" }));
                     }
