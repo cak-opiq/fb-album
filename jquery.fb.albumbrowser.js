@@ -620,6 +620,10 @@
                         $(this).parent().find("img.fb-preview-img-next").click();
                         return false;
                     });
+                    
+                    $(overlay).find(".fb-preview-text").click(function () {
+                        return false;
+                    });
 
                     if (settings.likeButton) {
                         $("body").append("<div>", { id: "fb-root" });
