@@ -653,10 +653,13 @@
                 $(photoLink).click(function (event) {
                     var previewText = $(".fb-preview-text");
                     var previewContent = $(".fb-preview-content");
+			var previewLink = $(".fb-link");
                     previewContent.hide();
                     if (settings.showImageText) {
                         previewText.html(parseLinks($(this).find(".fb-photo-text").text()));
                     }
+			previewLink.attr("href", $(this).attr("data-fb-page"));
+			previewLink.text("FB-Link");
 
                     addLikeButton(previewText, $(this).attr("data-fb-page"));
 
@@ -690,6 +693,7 @@
                             }
                             previewText.css("maxWidth", $(this).width() - 12);
                             previewText.css("minWidth", $(this).width() - 12);
+				previewLink.css("display", "block");
                             $(".fb-comment,.fb-comment-more").css("maxWidth", $(this).width() - 12);
                             $(this).show();
 
