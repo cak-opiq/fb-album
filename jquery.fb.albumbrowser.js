@@ -610,7 +610,7 @@
 
                     overlay.append(lightboxContent);
                     lightboxContent.append($("<img>", { class: "fb-preview-img" }));
-                    lightboxContent.append($("<a>Fb-Link</a>", { class: "fb-link" }));
+                    lightboxContent.append($("<a>", { class: "fb-link" }));
                     
                     if (settings.showImageText || settings.likeButton || settings.shareButton) {
                         lightboxContent.append($("<div>", { class: "fb-preview-text" }));
@@ -653,6 +653,7 @@
                 $(photoLink).click(function (event) {
                     var previewText = $(".fb-preview-text");
                     var previewContent = $(".fb-preview-content");
+			var previewLink = $(".fb-link");
 			
                     previewContent.hide();
                     if (settings.showImageText) {
