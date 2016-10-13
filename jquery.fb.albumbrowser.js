@@ -610,7 +610,8 @@
 
                     overlay.append(lightboxContent);
                     lightboxContent.append($("<img>", { class: "fb-preview-img" }));
-                    lightboxContent.append($("<a>", { class: "fb-link" }));
+                    lightboxContent.append($("<a>FB Link</a>", { class: "fb-link" }));
+			lightboxContent.append($("<a>Cek Stock</a>", { class: "stock" }));
                     
                     if (settings.showImageText || settings.likeButton || settings.shareButton) {
                         lightboxContent.append($("<div>", { class: "fb-preview-text" }));
