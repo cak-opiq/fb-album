@@ -610,8 +610,8 @@
 
                     overlay.append(lightboxContent);
                     lightboxContent.append($("<img>", { class: "fb-preview-img" }));
-                    lightboxContent.append($("<a>FB Link</a>", { class: "fb-link" }));
-			lightboxContent.append($("<a>Cek Stock</a>", { class: "stock" }));
+                    lightboxContent.append($("<a>", { class: "fb-link" }));
+			lightboxContent.append($("<a>", { class: "stock" }));
                     
                     if (settings.showImageText || settings.likeButton || settings.shareButton) {
                         lightboxContent.append($("<div>", { class: "fb-preview-text" }));
@@ -654,14 +654,15 @@
                 $(photoLink).click(function (event) {
                     var previewText = $(".fb-preview-text");
                     var previewContent = $(".fb-preview-content");
-			var previewLink = $(".fb-link");
+					var previewLink = $(".fb-link");
 			
                     previewContent.hide();
                     if (settings.showImageText) {
                         previewText.html(parseLinks($(this).find(".fb-photo-text").text()));
                     }
 			previewLink.attr("href", $(this).attr("data-fb-page"));
-			
+					previewLink.text('FB Link');
+			$('.stock').text('cek Stock');
 
                     addLikeButton(previewText, $(this).attr("data-fb-page"));
 
