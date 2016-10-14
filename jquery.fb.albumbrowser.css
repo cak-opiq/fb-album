@@ -93,7 +93,7 @@ div.fb-album-title {
     position: relative;
     margin-top: 0px;
     padding: 5px;
-    display: none;
+    /*display: none; */
 }
 
 div.fb-album-count {
@@ -144,7 +144,7 @@ img.fb-albums-list {
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 999;
+    z-index: 899;
     background-image: url('loader.gif');
     background-position: center center;
     background-repeat: no-repeat;

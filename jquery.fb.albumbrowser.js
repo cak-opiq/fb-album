@@ -703,6 +703,8 @@
                             }
                             previewText.css("maxWidth", $(this).width() - 12);
                             previewText.css("minWidth", $(this).width() - 12);
+							previewLink.css("maxWidth", $(this).width() - 12);
+							previewStock.css("maxWidth", $(this).width() - 12);
 							
                             $(".fb-comment,.fb-comment-more").css("maxWidth", $(this).width() - 12);
                             $(this).show();
