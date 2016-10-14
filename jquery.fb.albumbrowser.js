@@ -743,7 +743,9 @@
 							
 							previewStock.unbind("click");
 							previewStock.click(function() {
-								$.post('http://pojokbayi.com/album/getstock.php',{fbid:$('.fb-preview-img').attr("data-id")}, function(result){
+							var id = $('.fb-preview-img').attr("data-id");
+							console.log(id);
+								$.post('http://pojokbayi.com/album/getstock.php',{fbid:id}, function(result){
 									if (result){
 										console.log(result.total);
 										for(i=0; i<result.rows.length; i++){
