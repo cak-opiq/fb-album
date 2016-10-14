@@ -749,7 +749,7 @@
 								$.post('http://pojokbayi.com/album/getstock.php',{fpid:photoid}, function(result){
 									if (result){
 										//console.log(result.total);
-										previewText.prepend("\n");
+										previewText.prepend("\r\n");
 										for(i=0; i<result.rows.length; i++){
 										//	console.log(result.rows[i].fldName);
 											previewText.prepend(result.rows[i].fldName + "\r\n");
