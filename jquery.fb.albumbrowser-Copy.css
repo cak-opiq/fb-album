@@ -89,24 +89,23 @@ li.fb-album, li.fb-photo {
 
 div.fb-album-title {
     color: #fff;
-    background-color: rgba(59, 89, 152, 0.45);
+    background-color: rgba(59,89,152,1);
     position: relative;
     margin-top: 0px;
     padding: 5px;
-    /*display: none; */
+    display: none;
 }
 
 div.fb-album-count {
-    background-color: rgba(59, 89, 152, 0.52);
+    background-color: rgba(59,89,152,0.8);
     color: #ffffff;
     position: absolute;
     top: 0;
-	right: 0;
     text-align: center;
-    padding: 1px;
-    margin: 4px 0px;
+    padding: 5px;
+    margin: 6px;
     display: block;
-    min-width: 30px;
+    min-width: 34px;
     border-radius: 5px;
     -webkit-transition: top .3s linear;
     transition: top .3s linear;
