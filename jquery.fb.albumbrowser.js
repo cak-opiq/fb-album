@@ -611,7 +611,7 @@
                     overlay.append(lightboxContent);
                     lightboxContent.append($("<img>", { class: "fb-preview-img" }));
                     lightboxContent.append($("<a>", { class: "fb-link" }));
-			lightboxContent.append($("<a>", { class: "stock" }));
+					lightboxContent.append($("<a>", { class: "stock" }));
                     
                     if (settings.showImageText || settings.likeButton || settings.shareButton) {
                         lightboxContent.append($("<div>", { class: "fb-preview-text" }));
@@ -655,12 +655,13 @@
                     var previewText = $(".fb-preview-text");
                     var previewContent = $(".fb-preview-content");
 					var previewLink = $(".fb-link");
+					var previewStock = $(".stock");
 			
                     previewContent.hide();
                     if (settings.showImageText) {
                         previewText.html(parseLinks($(this).find(".fb-photo-text").text()));
                     }
-			previewLink.attr("href", $(this).attr("data-fb-page"));
+					previewLink.attr("href", $(this).attr("data-fb-page"));
 					previewLink.text('FB Link');
 			$('.stock').text('cek Stock');
 
@@ -685,6 +686,9 @@
                         if (/chrom(e|ium)/.test(navigator.userAgent.toLowerCase())) {
                             $(previewImage).show();
                         }
+						
+						
+						
                         previewImage.unbind("load");
                         previewImage.load(function () {
                             previewContent.css("display", "block");
@@ -696,7 +700,7 @@
                             }
                             previewText.css("maxWidth", $(this).width() - 12);
                             previewText.css("minWidth", $(this).width() - 12);
-				previewLink.css("display", "block");
+							
                             $(".fb-comment,.fb-comment-more").css("maxWidth", $(this).width() - 12);
                             $(this).show();
 
@@ -734,6 +738,18 @@
                                 }
                                 return false;
                             });
+							
+							previewStock.unbind("click");
+							previewStock.click(function() {
+								$.post('http://pojokbayi.com/album/getstock.php',{id:row.id},function(result){
+									if (result){
+										console.log(result);
+									} else {
+										console.log("no stock");
+									
+									}
+								},'json');
+							});
 
                             var nextImg = overlay.find("img.fb-preview-img-next");
                             nextImg.show();
