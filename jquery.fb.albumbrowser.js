@@ -663,7 +663,10 @@
                     }
 					previewLink.attr("href", $(this).attr("data-fb-page"));
 					previewLink.text('FB Link');
-			$('.stock').text('cek Stock');
+					previewStock.text('cek Stock');
+					previewLink.css("display", "block");
+					previewStock.css("display", "block");
+					
 
                     addLikeButton(previewText, $(this).attr("data-fb-page"));
 
@@ -749,6 +752,7 @@
 									
 									}
 								},'json');
+								return false;
 							});
 
                             var nextImg = overlay.find("img.fb-preview-img-next");
