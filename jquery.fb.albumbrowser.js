@@ -694,6 +694,7 @@
                         previewImage.unbind("load");
                         previewImage.load(function () {
                             previewContent.css("display", "block");
+							previewText.append("\r\nID: " + $(this).attr("data-id"));
                             if (previewText.text().trim() != "" || settings.likeBtn) {
                                 previewText.css("display", "block");
                             }
