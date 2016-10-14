@@ -749,12 +749,12 @@
 								$.post('http://pojokbayi.com/album/getstock.php',{fpid:photoid}, function(result){
 									if (result){
 										//console.log(result.total);
-										
+										previewText.prepend("\n");
 										for(i=0; i<result.rows.length; i++){
 										//	console.log(result.rows[i].fldName);
 											previewText.prepend(result.rows[i].fldName + "\r\n");
 										}
-										previewText.prepend("Total ketemu" + result.total + "barang. Variasi Barang: \r\n\n");
+										previewText.prepend("Total ketemu" + result.total + "barang. Variasi Barang: \r\n");
 									} else {
 										console.log("no stock");
 									
