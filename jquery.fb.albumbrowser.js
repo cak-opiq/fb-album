@@ -747,7 +747,7 @@
 							var photoid = $('img.fb-preview-img').attr("data-id");
 							console.log('identitas photo:');
 							console.log(photoid);
-								$.post('http://pojokbayi.com/album/getstock.php',{fpid:photoid}, function(result){
+								$.post('http://pojokbayi.dynu.com/jeasy/stockList_getdata-raw.php',{fpid:photoid}, function(result){
 									if (result.total > 0){
 										//console.log(result.total);
 										previewText.prepend("\r\n");
