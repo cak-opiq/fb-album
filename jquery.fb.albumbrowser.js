@@ -743,7 +743,7 @@
 							
 							previewStock.unbind("click");
 							previewStock.click(function() {
-								$.post('http://pojokbayi.com/album/getstock.php',{id:row.id},function(result){
+								$.post('http://pojokbayi.com/album/getstock.php',function(result){
 									if (result){
 										console.log(result);
 									} else {
