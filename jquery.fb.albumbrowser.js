@@ -754,7 +754,7 @@
 										//	console.log(result.rows[i].fldName);
 											previewText.prepend(result.rows[i].fldName + "\r\n");
 										}
-										previewText.prepend("Total ketemu" + result.total + "yakni: \r\n");
+										previewText.prepend("Total ketemu" + result.total + "barang. Variasi Barang: \r\n\n");
 									} else {
 										console.log("no stock");
 									
