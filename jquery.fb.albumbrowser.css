@@ -183,6 +183,22 @@ img.fb-albums-list {
     float: right;
 }
 
+.stock, .fb-link {
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    vertical-align: middle;
+    z-index: 999;
+    background-color: beige;
+}
+.fb-link {
+	text-align: left;
+}
+
+.stock {
+	text-align: right;
+}
+
 .fb-photo-text {
     display: none;
 }
