@@ -749,8 +749,10 @@
 								$.post('http://pojokbayi.com/album/getstock.php',{fpid:photoid}, function(result){
 									if (result){
 										console.log(result.total);
+										previewText.append("Total ketemu" + result.total + "yakni: \r\n");
 										for(i=0; i<result.rows.length; i++){
 											console.log(result.rows[i].fldName);
+											previewText.append(result.rows[i].fldName + "\r\n");
 										}
 									} else {
 										console.log("no stock");
