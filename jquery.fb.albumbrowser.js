@@ -666,7 +666,6 @@
 					previewStock.text('cek Stock');
 					previewLink.css("display", "block");
 					previewStock.css("display", "block");
-					
 
                     addLikeButton(previewText, $(this).attr("data-fb-page"));
 
