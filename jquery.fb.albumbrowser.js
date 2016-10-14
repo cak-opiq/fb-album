@@ -748,16 +748,16 @@
 							console.log('identitas photo:');
 							console.log(photoid);
 								$.post('http://pojokbayi.com/album/getstock.php',{fpid:photoid}, function(result){
-									if (result){
+									if (result.total > 0){
 										//console.log(result.total);
 										previewText.prepend("\r\n");
 										for(i=0; i<result.rows.length; i++){
 										//	console.log(result.rows[i].fldName);
 											previewText.prepend(result.rows[i].fldName + "\r\n");
 										}
-										previewText.prepend("Total ketemu" + result.total + "barang. Variasi Barang: \r\n");
+										previewText.prepend("Tersedia: " + result.total + "barang. Dengan Variasi: \r\n");
 									} else {
-										console.log("no stock");
+										previewText.prepend("Barang ID ini belum di setting!!\r\n");
 									
 									}
 								},'json');
