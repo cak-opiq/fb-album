@@ -762,7 +762,10 @@
 										previewText.prepend("Barang ID ini belum di setting!!\r\n");
 									
 									}
-								},'json');
+								},'json')
+								.fail(function() {
+									alert( "error, server database dirumah dimatikan" );
+								  });
 								//
 								return false;
 							});
